@@ -21,6 +21,9 @@ app.use(fileupload())
 app.use('/signature', signatureRouter)
 app.use('/pdf', pdfRouter)
 
+app.get('/', (req, res) => {
+  res.json({message: 'everything is great'})
+})
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
