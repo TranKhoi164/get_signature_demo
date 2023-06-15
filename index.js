@@ -22,6 +22,7 @@ app.use('/signature', signatureRouter)
 app.use('/pdf', pdfRouter)
 
 app.get('/', (req, res) => {
+  console.log(NODE_ENV + ' ' + CLIENT_PRO);
   res.json({message: 'everything is great'})
 })
 
